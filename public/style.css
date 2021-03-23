@@ -1,0 +1,108 @@
+.backdrop, .login {
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.login {
+    transform: translateY(-300px);
+    position: fixed;
+    z-index: 10;
+    top: 40%;
+    left: calc(50% - 150px);
+    width: 300px;
+}
+
+.backdrop.active {
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.356);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.login.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.logo {
+    margin: 10px auto 10px auto;
+    width: 100px;
+}
+
+.chat-area {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.chat {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid rgb(196, 196, 196);
+    max-width: 700px;
+    min-height: 600px;
+    padding:15px;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+.send {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.chat .message {
+    border-radius: 5px;
+    background-color: rgb(224, 224, 224);
+    padding: 10px;
+    height: max-content;
+    margin-bottom: 10px;
+
+}
+
+.chat .message:last-child {
+    margin: 0;
+}
+
+.chat .my-message {
+    background-color: rgb(224, 224, 224);
+    align-self: flex-start;
+}
+
+.chat .other-message {
+    background-color: #98e9c3;
+    align-self: flex-end;
+}
+
+.username {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    color: rgb(54, 54, 54);
+    font-weight: bold;
+}
+
+.message-text {
+    margin: 0;
+    font-size: 15px;
+}
+
+.footer {
+    margin-top: 30px;
+}
+.footer p {
+    font-size: 12px;
+    text-align: center;
+    color: rgb(124, 124, 124);
+}
+
+@media only screen and (min-width: 700px) {
+    .login.active {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+}
