@@ -72,9 +72,7 @@ img {
 
 }
 
-.chat .message:last-child {
-    margin: 0;
-}
+
 
 .chat .my-message {
     background-color: rgb(224, 224, 224);
