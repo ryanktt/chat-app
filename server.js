@@ -6,7 +6,7 @@ const path = require('path');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
-// set the view engine to ejs
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public'));
 app.use(express.static(path.join(__dirname, 'public')));
