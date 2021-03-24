@@ -1,3 +1,6 @@
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
 .backdrop, .login {
     opacity: 0;
     transition: 0.4s ease;
@@ -7,10 +10,11 @@
     transform: translateY(-300px);
     position: fixed;
     z-index: 10;
-    top: 40%;
+    top: 35%;
     left: calc(50% - 150px);
     width: 300px;
 }
+
 
 .backdrop.active {
     z-index: 5;
@@ -35,7 +39,9 @@
 
 .chat-area {
     margin: 0 auto;
-    width: fit-content;
+    width: 100%;
+    max-width: 700px;
+    max-height: 700px;
 }
 
 .chat {
@@ -45,10 +51,11 @@
     border-radius: 5px;
     border: 1px solid rgb(196, 196, 196);
     max-width: 700px;
-    min-height: 600px;
-    padding:15px;
+    min-height: 500px;
+    padding: 15px;
     overflow: auto;
     margin-bottom: 10px;
+    max-height: 600px;
 }
 
 .send {
@@ -91,14 +98,7 @@
     font-size: 15px;
 }
 
-.footer {
-    margin-top: 30px;
-}
-.footer p {
-    font-size: 12px;
-    text-align: center;
-    color: rgb(124, 124, 124);
-}
+
 
 @media only screen and (min-width: 700px) {
     .login.active {
